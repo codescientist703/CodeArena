@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/CodeArena/static/css/main.280041a9.chunk.css",
+    "main.js": "/CodeArena/static/js/main.7f9db841.chunk.js",
+    "main.js.map": "/CodeArena/static/js/main.7f9db841.chunk.js.map",
+    "runtime-main.js": "/CodeArena/static/js/runtime-main.7399b00b.js",
+    "runtime-main.js.map": "/CodeArena/static/js/runtime-main.7399b00b.js.map",
+    "static/css/2.a8c48e20.chunk.css": "/CodeArena/static/css/2.a8c48e20.chunk.css",
+    "static/js/2.1f3a4b63.chunk.js": "/CodeArena/static/js/2.1f3a4b63.chunk.js",
+    "static/js/2.1f3a4b63.chunk.js.map": "/CodeArena/static/js/2.1f3a4b63.chunk.js.map",
+    "index.html": "/CodeArena/index.html",
+    "precache-manifest.0b6a47b21a7310fc86ffbe4bf6f5ec9d.js": "/CodeArena/precache-manifest.0b6a47b21a7310fc86ffbe4bf6f5ec9d.js",
+    "service-worker.js": "/CodeArena/service-worker.js",
+    "static/css/2.a8c48e20.chunk.css.map": "/CodeArena/static/css/2.a8c48e20.chunk.css.map",
+    "static/css/main.280041a9.chunk.css.map": "/CodeArena/static/css/main.280041a9.chunk.css.map",
+    "static/js/2.1f3a4b63.chunk.js.LICENSE.txt": "/CodeArena/static/js/2.1f3a4b63.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7399b00b.js",
+    "static/css/2.a8c48e20.chunk.css",
+    "static/js/2.1f3a4b63.chunk.js",
+    "static/css/main.280041a9.chunk.css",
+    "static/js/main.7f9db841.chunk.js"
+  ]
+}

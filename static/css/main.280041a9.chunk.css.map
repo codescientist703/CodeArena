@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,YACC,UAAW,CACX,eAAgB,CAChB,WAAY,CACZ,WACD","file":"main.280041a9.chunk.css","sourcesContent":[".login-form{\n\twidth: 100%;\n\tmax-width: 330px;\n\tmargin: auto;\n\theight: 100%;\n}\n\n"]}
