@@ -35,9 +35,9 @@ class Navu extends React.Component {
 		return (
 		<Styles>
 			<Navbar >
-				<NavbarBrand href=''>Code Arena</NavbarBrand>
+				<NavbarBrand href=''>Contest GeeksLords</NavbarBrand>
 				<Nav className="ml-auto">
-					<Link to='/about'><NavItem><NavLink >About</NavLink></NavItem></Link>
+				
 					<Link to='/dashboard'><NavItem><NavLink >Dashboard</NavLink></NavItem></Link>
 					 { this.state.isLogged === 'true' ? <Link to='/login' onClick={this.onLogout}><NavItem><NavLink>Logout</NavLink></NavItem></Link>
 					  : <Link to='/login'><NavItem><NavLink >Login</NavLink></NavItem></Link>

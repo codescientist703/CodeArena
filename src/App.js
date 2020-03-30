@@ -26,7 +26,7 @@ class App extends React.Component{
 			<Navu />
 			<MyAppText>
 			 <Switch>
-				<Route path='/' exact component={About} />
+				<Route path='/' exact component={Login} />
 				<Route path='/login' component={Login}  />
 				<Route path='/dashboard' exact component={Dashboard}  />
 				<Route path='/dashboard/:id' exact component={Contest}  />

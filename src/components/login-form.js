@@ -56,7 +56,7 @@ class Login extends React.Component{
 
 			<Form>
 			   <div className="login-box">
-			   <h3 className="">Welcome to my CodeArena</h3>
+			   <h3 className="">Welcome to my Code Arena</h3>
 			    <img src={process.env.PUBLIC_URL + "/codeicon.jpg"} width="170px"/>
 			   <Button className="btn-lg btn-success btn-block"
 			   onClick={e => this.handleFormSubmit(e)}>Log in with codechef</Button>

@@ -124,7 +124,7 @@ class Dashboard extends React.Component{
 			   <Link to={`/dashboard/${this.state.cname}`}> <Button>Click to access contest</Button></Link>
 		      </Styles>
 		    )
-		    : (<h2>You are not allowed to view this page</h2>)
+		    : (<h2>Please Log in to view this page</h2>)
 		    }
 		   </div>
 		   
