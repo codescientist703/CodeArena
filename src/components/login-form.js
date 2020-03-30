@@ -48,7 +48,7 @@ class Login extends React.Component{
         this.setState({
 			isLogged: 'true',
 	     })
-        window.location.assign('http://127.0.0.1/codechef.php');
+        window.location.assign('http://localhost:8000/codechef.php');
     }
 	render() {
 		return (

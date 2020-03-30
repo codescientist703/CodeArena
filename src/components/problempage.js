@@ -8,14 +8,21 @@ import Loader from './loader'
 
 const Styles = styled.div`
 p {
-	font-size: 18px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
 }
-
+li{
+	font-size: 18px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
 button{
 	width: 100%;
 }
 .col-md-4{
 	padding: 100px;
+}
+.col-md-8 {
+	padding: 30px;
 }
    
 `;
@@ -35,7 +42,7 @@ class Problem extends React.Component{
 	}
 	componentDidMount(){
         axios({
-	      url: "http://127.0.0.1/contest.php",
+	      url: "http://localhost:8000/contest.php",
 	      method: 'post',
 	      headers: { Accept: 'application/json'},
 	      data: this.state,
@@ -61,16 +68,16 @@ class Problem extends React.Component{
 		let body = this.state.data.result.data.content.body
 		return (
 			<Styles>
-			<div className="row">
-			<div className="col-md-8">
-			<h3>Problem Statement:</h3>
-			<br/>
-			<div  dangerouslySetInnerHTML={{__html: body}} />
-			</div>
-			<div className="col-md-4" >
-			    <button className="btn-primary">Submit</button>
-			</div>
-			</div>
+				<div className="row">
+					<div className="col-md-8">
+						<h3>Problem Statement:</h3>
+						<br/>
+						<div  dangerouslySetInnerHTML={{__html: body}} />
+					</div>
+					<div className="col-md-4" >
+					    <button className="btn-primary">Submit</button>
+					</div>
+				</div>
 		    </Styles>
 		)
 	}

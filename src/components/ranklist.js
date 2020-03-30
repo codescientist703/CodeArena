@@ -22,7 +22,7 @@ class Ranklist extends React.Component{
 	}
 	componentDidMount(){
         axios({
-	      url: "http://127.0.0.1/contest.php",
+	      url: "http://localhost:8000/contest.php",
 	      method: 'post',
 	      headers: { Accept: 'application/json'},
 	      data: this.state,

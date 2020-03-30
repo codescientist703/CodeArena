@@ -5,17 +5,18 @@ import { Table } from 'reactstrap'
 import styled from 'styled-components'
 import axios from 'axios'
 import Loader from './loader'
+import Recent from './recentsubmissions'
 
 const Styles = styled.div`
     h4 {
     	color: purple;
     	padding: 20px;
-    	margin-left: 40px;
+    	margin-left: 10px;
     }
     button{
     	padding: 5px;
-    	width: 84%;	
-    	max-width: 100%;
+    	width: 100%;	
+    	
     }
     table {
     	width: 100%;
@@ -30,7 +31,7 @@ const Styles = styled.div`
     }
     .rank-box{
     	padding: 30px;
-    	margin-left: 60px;
+    	margin-left: 23px;
     	margin-top: 50px;
     	border-style: solid;
         border-width: 1px;
@@ -40,20 +41,42 @@ const Styles = styled.div`
     	padding-bottom: 20px;
     	padding-left: 31px;
     	padding-right: 1px;
-    	margin-left: 60px;
+    	margin-left: 23px;
     	border-style: solid;
         border-width: 1px;
 
     }
     .table-box{
     	padding: 30px;
-    	margin-left: 60px;
+    	margin-left: 10px;
     	border-style: solid;
         border-width: 1px;
         border-radius: 10px;
 
     }
-   
+    .recent-box{
+         padding-top: 70px;
+         padding-left: 20px;
+
+    }
+    .recent-box table{
+		width: 10%;
+		font-size: 10px;
+		box-shadow: none;
+	}	
+	.recent-box td {
+        padding: 0px;
+    }
+    .recent-box th {
+        padding: 2px;
+    }
+    .recent-box button {
+    	padding: 1px;
+        width: 100%;
+        color: #1A1A30;
+        background-color: #82C8FF;
+    }
+
 `;
 
 class Contest extends React.Component{
@@ -63,16 +86,22 @@ class Contest extends React.Component{
 		localStorage.setItem('cur_contest', this.props.match.params.id)
 		this.state = {
 			status: false,
+			status1: false,
 			id: localStorage.getItem('refresh_token'),
 			data: [],
 			cname: this.props.match.params.id
 		}
 		//this.handleClick = this.handleClick.bind(this)
 	}
+	handleChange = () => {
+		this.setState(prevState => ({
+			status1: !prevState.status1
+		}))
+	}
 
     componentDidMount(){
         axios({
-	      url: "http://127.0.0.1/contest.php",
+	      url: "http://localhost:8000/contest.php",
 	      method: 'post',
 	      headers: { Accept: 'application/json'},
 	      data: this.state,
@@ -86,10 +115,9 @@ class Contest extends React.Component{
         	status: true
         })
       })
-      .catch(error => {
-     
-      })
+
 	  }
+
 	render() {
 		if(!this.state.status){
 			return (
@@ -100,7 +128,7 @@ class Contest extends React.Component{
 		}
 		return (
 			<Styles>
-			<h4>Scorable Problems -</h4>
+			<h4>Scorable Problems </h4>
 			<div className="row">
 				<div className="col-md-9 col-sm-6 ">
 				<div className="table-box">
@@ -128,6 +156,13 @@ class Contest extends React.Component{
 			        </div>
 			        <div className="rank-box">
 			        <Link to={`/dashboard/${this.state.cname}/ranklist`}><button className="btn-primary">Ranklist</button></Link>
+			        </div>
+			        <div className="recent-box">
+			            <button onClick={this.handleChange}>View Recent submissions</button>
+				        {this.state.status1 
+				        	? <Recent />
+				        	: <div></div>
+				        }
 			        </div>
 			    </div>
 			     

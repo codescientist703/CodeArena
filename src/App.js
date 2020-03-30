@@ -10,7 +10,7 @@ import Test from './components/test'
 import Ranklist from './components/ranklist'
 import Loader from './components/loader'
 import { BrowserRouter as Router , Switch, Route} from 'react-router-dom'
-
+import Recent from './components/recentsubmissions'
 
 class App extends React.Component{
 	constructor(){
@@ -32,7 +32,8 @@ class App extends React.Component{
 				<Route path='/dashboard/:id' exact component={Contest}  />
 				<Route path='/dashboard/:id/ranklist' exact component={Ranklist}  />
 				<Route path='/dashboard/:id/:id' component = {Problem} />
-			</Switch> 
+			</Switch>
+		
 			</MyAppText>
 			</div>
 			</Router>

@@ -1,0 +1,131 @@
+{
+  "status": "OK",
+  "result": {
+    "data": {
+      "content": [
+        {
+          "id": 17047680,
+          "date": "2018-01-15 15:00:00",
+          "language": "C++14",
+          "username": "chomolungma",
+          "problemCode": "PRTITION",
+          "contestCode": "JAN18",
+          "result": "WA",
+          "score": "0",
+          "time": 0,
+          "memory": 15240
+        },
+        {
+          "id": 17047681,
+          "date": "2018-01-15 15:00:00",
+          "language": "PYTH 3.5",
+          "username": "shaikkamran",
+          "problemCode": "PRTITION",
+          "contestCode": "JAN18",
+          "result": "WA",
+          "score": "0",
+          "time": 0,
+          "memory": 0
+        },
+        {
+          "id": 17047676,
+          "date": "2018-01-15 14:59:59",
+          "language": "C++14",
+          "username": "alis_jain",
+          "problemCode": "MONSTER",
+          "contestCode": "JAN18",
+          "result": "AC",
+          "score": "10",
+          "time": 0.12,
+          "memory": 17584
+        },
+        {
+          "id": 17047677,
+          "date": "2018-01-15 14:59:59",
+          "language": "C++14",
+          "username": "chinmay2",
+          "problemCode": "SQRGOOD",
+          "contestCode": "JAN18",
+          "result": "AC",
+          "score": "6",
+          "time": 0.04,
+          "memory": 16064
+        },
+        {
+          "id": 17047679,
+          "date": "2018-01-15 14:59:59",
+          "language": "C++14",
+          "username": "helthazar",
+          "problemCode": "SQRGOOD",
+          "contestCode": "JAN18",
+          "result": "AC",
+          "score": "50",
+          "time": 1.77,
+          "memory": 414080
+        },
+        {
+          "id": 17047678,
+          "date": "2018-01-15 14:59:59",
+          "language": "C++ 4.3.2",
+          "username": "dreamers_",
+          "problemCode": "PRTITION",
+          "contestCode": "JAN18",
+          "result": "WA",
+          "score": "0",
+          "time": 0.03,
+          "memory": 23744
+        },
+        {
+          "id": 17047675,
+          "date": "2018-01-15 14:59:58",
+          "language": "C++ 6.3",
+          "username": "garvitb12",
+          "problemCode": "CHEFPALS",
+          "contestCode": "JAN18",
+          "result": "RTE",
+          "score": "0",
+          "time": 0,
+          "memory": 81152
+        },
+        {
+          "id": 17047673,
+          "date": "2018-01-15 14:59:57",
+          "language": "C++14",
+          "username": "z0rr0",
+          "problemCode": "CHEFPALS",
+          "contestCode": "JAN18",
+          "result": "AC",
+          "score": "5162",
+          "time": 0,
+          "memory": 15776
+        },
+        {
+          "id": 17047674,
+          "date": "2018-01-15 14:59:57",
+          "language": "C++14",
+          "username": "skyfire",
+          "problemCode": "CHEFPALS",
+          "contestCode": "JAN18",
+          "result": "TLE",
+          "score": "0",
+          "time": 1.01,
+          "memory": 40248
+        },
+        {
+          "id": 17047672,
+          "date": "2018-01-15 14:59:56",
+          "language": "C++14",
+          "username": "zyper26",
+          "problemCode": "STRMRG",
+          "contestCode": "JAN18",
+          "result": "WA",
+          "score": "0",
+          "time": 0,
+          "memory": 0
+        }
+      ],
+      "code": 9001,
+      "message": "submissions fetched successfully"
+    }
+  }
+}
