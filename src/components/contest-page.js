@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import axios from 'axios'
 import Loader from './loader'
 import Recent from './recentsubmissions'
+import Errorr from './error'
 
 const Styles = styled.div`
     h4 {
@@ -85,7 +86,7 @@ class Contest extends React.Component{
 		console.log(this.props.match)
 		localStorage.setItem('cur_contest', this.props.match.params.id)
 		this.state = {
-			status: false,
+			status: "false",
 			status1: false,
 			id: localStorage.getItem('refresh_token'),
 			data: [],
@@ -103,6 +104,7 @@ class Contest extends React.Component{
         axios({
 	      url: "http://localhost:8000/contest.php",
 	      method: 'post',
+	      timeout: 8000,
 	      headers: { Accept: 'application/json'},
 	      data: this.state,
 	    })
@@ -112,18 +114,23 @@ class Contest extends React.Component{
       	localStorage.setItem('refresh_token',res.data.refresh_token)
         this.setState({
         	data: res.data,
-        	status: true
+        	status: res.data.status
         })
       })
 
 	  }
 
 	render() {
-		if(!this.state.status){
+		if(this.state.status === 'false'){
 			return (
 				<div>
 				<Loader/>
 				</div>
+			)
+		}
+		else if(this.state.status === 'error' || this.state.status === 'FORBIDDEN'){
+			return (
+				<Errorr />
 			)
 		}
 		return (

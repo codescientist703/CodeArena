@@ -5,6 +5,7 @@ import ReactTable from 'react-table-v6'
 import 'react-table-v6/react-table.css'
 import axios from 'axios'
 import Loader from './loader'
+import Errorr from './error'
 
 const Styles = styled.div`
     width: 80%;
@@ -14,7 +15,7 @@ class Ranklist extends React.Component{
 		super(props);
 		console.log(this.props.match)
 		this.state = {
-			status: false,
+			status: 'false',
 			id: localStorage.getItem('refresh_token'),
 			data: [],
 			rname: localStorage.getItem('cur_contest')
@@ -33,7 +34,7 @@ class Ranklist extends React.Component{
       	localStorage.setItem('refresh_token',res.data.refresh_token)
         this.setState({
         	data: res.data.result.data.content,
-        	status: true
+        	status: res.data.status
         })
       })
 	}
@@ -70,11 +71,16 @@ class Ranklist extends React.Component{
 			}
 		},
 		]
-		if(!this.state.status){
+		if(this.state.status === 'false'){
 			return (
 				<div>
-				<Loader />
+				<Loader/>
 				</div>
+			)
+		}
+		else if(this.state.status === 'error' || this.state.status === 'FORBIDDEN'){
+			return (
+				<Errorr />
 			)
 		}
 		return (

@@ -25,7 +25,7 @@ class App extends React.Component{
 			<div>
 			<Navu />
 			<MyAppText>
-			 <Switch>
+			<Switch>
 				<Route path='/' exact component={Login} />
 				<Route path='/login' component={Login}  />
 				<Route path='/dashboard' exact component={Dashboard}  />
@@ -33,7 +33,6 @@ class App extends React.Component{
 				<Route path='/dashboard/:id/ranklist' exact component={Ranklist}  />
 				<Route path='/dashboard/:id/:id' component = {Problem} />
 			</Switch>
-		
 			</MyAppText>
 			</div>
 			</Router>

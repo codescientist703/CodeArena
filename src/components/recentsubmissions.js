@@ -17,7 +17,7 @@ class Recent extends React.Component{
 		this.state = {
 			id: localStorage.getItem('refresh_token'),
 			data: [],
-			status: false,
+			status: 'false',
 			rsname: localStorage.getItem('cur_contest')
 		}
 
@@ -35,16 +35,21 @@ class Recent extends React.Component{
       	localStorage.setItem('refresh_token',res.data.refresh_token)
         this.setState({
         	data: res.data,
-        	status: true
+        	status: res.data.status
         })
       })
 	}
 	render() {
-		if(this.state.status === false){
-			return(
+		if(this.state.status === 'false'){
+			return (
 				<div>
-					Loading.....
+				Loading....
 				</div>
+			)
+		}
+		else if(this.state.status === 'error' || this.state.status === 'FORBIDDEN'){
+			return (
+				<div>Unable to serve request. Please login again.</div>
 			)
 		}
 		return(

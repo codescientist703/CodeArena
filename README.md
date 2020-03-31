@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Code Arena developed as a part of CodeChef Intern Hiring Round 2.
 
 ## Available Scripts
 

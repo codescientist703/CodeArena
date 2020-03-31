@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import axios from 'axios'
 import problems from './probdetails'
 import Loader from './loader'
+import Errorr from './error'
 
 const Styles = styled.div`
 p {
@@ -33,7 +34,7 @@ class Problem extends React.Component{
 		console.log(this.props.match)
 
 		this.state = {
-			status: false,
+			status: 'false',
 			id: localStorage.getItem('refresh_token'),
 			data: [],
 			pname: this.props.match.params.id,
@@ -53,16 +54,21 @@ class Problem extends React.Component{
       	localStorage.setItem('refresh_token',res.data.refresh_token)
         this.setState({
         	data: res.data,
-        	status: true
+        	status: res.data.status
         })
       })
 	}
 	render() {
-		if(!this.state.status){
+		if(this.state.status === 'false'){
 			return (
 				<div>
-				<Loader />
+				<Loader/>
 				</div>
+			)
+		}
+		else if(this.state.status === 'error' || this.state.status === 'FORBIDDEN'){
+			return (
+				<Errorr />
 			)
 		}
 		let body = this.state.data.result.data.content.body
